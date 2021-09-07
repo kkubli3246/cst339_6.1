@@ -1,0 +1,1 @@
+When we run the our code, submit the form and stop the application. We can see that init and destroy were both printed to the console with out having to call the methods directly to the Login Controller. Init and Destroy are both called once to show the initialization and ending of the application services. 

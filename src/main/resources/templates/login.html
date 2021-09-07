@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--Login View Templete-->
+
+<html xmlns:th="http://www.thymeleaf.com" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout" layout:decorate ="layouts/defaultTemplate">
+	<head></head>
+	
+	<body>
+		<div th:if="${param.error}">
+			Invalid Username or Password
+		</div>
+		<form th:action="@{/login}" method="post">
+			<table>
+				<!--Username-->
+				<tr>
+					<td>Username: </td>  <td><input type ="text" name="username" id="username" placeHolder="Username" required/></td>
+				</tr>
+				
+				<!--Password-->
+				<tr>
+					<td>Password: </td>  <td><input type ="text" name="password" id="password" placeHolder="Password" required/></td>
+				</tr>
+				
+				<!--Submit-->
+				<tr>
+					<td colspan ="2"> <input type="submit" value="Sign In"></td>
+				</tr>
+			</table>
+			
+		</form>
+		</div>
+	</body>
+</html>
